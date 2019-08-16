@@ -1,22 +1,15 @@
 import React from "react";
 import ReactDom from "react-dom";
+import AppHeader from "./components/app-header";
+import SearchPanel from "./components/search-panel";
+import TodoList from "./components/todo-list";
 
-function TodoItem() {
-  return <span>Drink Coffee</span>;
-}
-function TodoList() {
-  return (
-    <ul>
-      <li>
-        <TodoItem />
-      </li>
-      <li>
-        <TodoItem />
-      </li>
-      <li>
-        <TodoItem />
-      </li>
-    </ul>
-  );
-}
-ReactDom.render(<TodoList />, document.getElementById("root"));
+const el = (
+  <div>
+    <AppHeader />
+    <SearchPanel />
+    <TodoList />
+  </div>
+);
+
+ReactDom.render(el, document.getElementById("root"));
